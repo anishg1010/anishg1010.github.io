@@ -5,12 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Anish Gaware — M.Sc. Applied Data Science & AI. Building ML, LLM/RAG and computer-vision systems. Open to a 6-month AI/ML internship from Nov 2026.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://anishg1010.github.io/">
 <meta property="og:title" content="Anish Gaware — AI / ML Engineer">
 <meta property="og:description" content="M.Sc. Data Science & AI. Building ML, LLM/RAG and computer-vision systems. Open to a 6-month AI/ML internship from Nov 2026.">
 <meta property="og:site_name" content="Anish Gaware">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://anishg1010.github.io/preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Anish Gaware — AI / ML Engineer">
 <meta name="twitter:description" content="M.Sc. Data Science & AI · ML, LLM/RAG & Computer Vision · Open to an AI/ML internship from Nov 2026.">
+<meta name="twitter:image" content="https://anishg1010.github.io/preview.png">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2317315c'/><text x='50' y='70' font-family='Arial,sans-serif' font-size='54' font-weight='bold' fill='%23e2a455' text-anchor='middle'>AG</text></svg>">
 <title>Anish Gaware — AI / ML Engineer</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -210,6 +215,41 @@
   .copied{color:var(--accent-2)!important}
 
   .progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));z-index:70;transition:width .08s linear}
+
+  /* impact numbers */
+  .stats{background:var(--surface-2);border-bottom:1px solid var(--line)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding-block:28px}
+  @media(max-width:640px){.stats .wrap{grid-template-columns:repeat(2,1fr);gap:22px 18px}}
+  .stat .n{font-family:var(--font-d);font-weight:700;font-size:clamp(26px,4.2vw,40px);letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1}
+  .stat .n b{color:var(--accent);font-weight:700}
+  .stat .l{font-family:var(--font-m);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-top:8px}
+
+  /* card detail affordance */
+  .card{cursor:pointer}
+  .card .more{margin-top:16px;font-family:var(--font-m);font-size:12px;color:var(--faint);display:inline-flex;align-items:center;gap:6px;transition:color .2s}
+  .card:hover .more{color:var(--accent)}
+  .card .more .ar{transition:transform .2s}
+  .card:hover .more .ar{transform:translateX(3px)}
+
+  /* modal */
+  .modal{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;padding:20px}
+  .modal.open{display:flex}
+  .modal .back{position:absolute;inset:0;background:rgba(6,10,18,.62);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+  .modal .panel{position:relative;background:var(--surface);border:1px solid var(--line-strong);border-radius:18px;
+    max-width:620px;width:100%;max-height:86vh;overflow:auto;padding:clamp(24px,4vw,36px);box-shadow:var(--shadow-lift)}
+  .modal .x{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:10px;border:1px solid var(--line);
+    background:var(--surface-2);color:var(--ink);cursor:pointer;font-size:17px;display:grid;place-items:center}
+  .modal .x:hover{border-color:var(--accent);color:var(--accent)}
+  .modal .mtag{font-family:var(--font-m);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:500}
+  .modal h3{font-family:var(--font-d);font-weight:600;font-size:clamp(22px,3.6vw,28px);letter-spacing:-.015em;margin-top:10px;line-height:1.2}
+  .modal .mstack{font-family:var(--font-m);font-size:12.5px;color:var(--faint);margin-top:10px}
+  .modal ul{margin-top:20px;padding-left:20px;display:flex;flex-direction:column;gap:13px}
+  .modal li{font-size:15px;color:var(--muted);line-height:1.55}
+  .modal li::marker{color:var(--accent)}
+  .modal .mfoot{margin-top:22px;display:flex;gap:14px;flex-wrap:wrap}
+  .modal .mfoot a{font-family:var(--font-m);font-size:13px;font-weight:500;color:var(--brand-ink);display:inline-flex;gap:6px;align-items:center}
+  .modal .mfoot a:hover{color:var(--accent)}
+
   footer{padding-block:34px 46px;border-top:1px solid var(--line)}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--faint);font-family:var(--font-m);font-size:12.5px}
 
@@ -256,6 +296,15 @@
         <a class="btn" href="https://github.com/anishg1010" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
         <a class="btn" href="https://www.linkedin.com/in/anishgaware" target="_blank" rel="noopener">LinkedIn <span class="arr">↗</span></a>
       </div>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="At a glance">
+    <div class="wrap">
+      <div class="stat"><div class="n">9</div><div class="l">Projects shipped</div></div>
+      <div class="stat"><div class="n">0<b>.</b>974</div><div class="l">Best ROC-AUC</div></div>
+      <div class="stat"><div class="n">3<b>,</b>024</div><div class="l">SAR images curated</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">Certifications</div></div>
     </div>
   </section>
 
@@ -429,6 +478,18 @@
   </section>
 </main>
 
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="back" data-close></div>
+  <div class="panel">
+    <button class="x" data-close aria-label="Close">✕</button>
+    <div class="mtag" id="mTag"></div>
+    <h3 id="mTitle"></h3>
+    <div class="mstack" id="mStack"></div>
+    <ul id="mList"></ul>
+    <div class="mfoot" id="mFoot"></div>
+  </div>
+</div>
+
 <footer>
   <div class="wrap">
     <span>Anish Gaware · Mannheim, Germany</span>
@@ -489,6 +550,68 @@
       c.addEventListener('pointerleave',function(){c.style.transform='';});
     });
   }
+
+  /* project case-study modal */
+  var DETAILS={
+    "SRH University AI Copilot":{stack:"Python · FastAPI · Qdrant · BGE-M3 · Ollama · Keycloak · PostgreSQL · Docker · React",code:"",bullets:[
+      "Official M.Sc. Collaborative Industry Project (team of 4). I drive the Teaching Innovation Agent, its agent logic and pedagogical system prompts, and contribute to the shared orchestrator and retrieval pipeline.",
+      "Governed stack: a React teaching workbench, FastAPI, hybrid retrieval over Qdrant (BGE-M3 embeddings, RRF fusion, cross-encoder reranking), local LLMs via Ollama, Keycloak auth and PostgreSQL, all in Docker.",
+      "Trust-by-design: fail-closed behaviour, per-source citations, governed streaming and a ‘never grade, never invent policy’ guardrail."]},
+    "SAR-only Land-Cover Monitoring":{stack:"PyTorch · segmentation-models-pytorch · Google Earth Engine · NVIDIA H200",code:"https://github.com/anishg1010/SAR-LULC-Monitor",bullets:[
+      "Built a 3,024 image/label dataset (VV, VH, VV-VH) over 21 European regions in Google Earth Engine with ESA WorldCover labels merged to 6 classes: speckle filtering, monthly median composites, dB conversion and a leakage-safe regional split.",
+      "Trained and compared four PyTorch models on an NVIDIA H200 (U-Net+ResNet-34, DeepLabV3+, U-Net from scratch, a temporal CNN+LSTM); best reached 75.3% accuracy, 0.541 mIoU and 0.657 mean F1 on three unseen regions.",
+      "Benchmarked against a Random Forest baseline, validated against Google Dynamic World (88-91% pixel agreement), tested generalisation to Pune, and delivered a 30-page report, notebooks and a demo. Individual academic module project."]},
+    "AI CEO Strategic Intelligence Agent":{stack:"LangGraph · Qwen3-8B · ChromaDB · FinBERT · RoBERTa · Ollama",code:"https://github.com/anishg1010/NVIDIA-AI-CEO",bullets:[
+      "Autonomous multi-agent system (LangGraph state machine) ingesting 20+ live sources, producing a CEO briefing and live Q&A, and abstaining when the evidence is insufficient.",
+      "Credibility-weighted RAG over 1,291 ChromaDB chunks, a four-agent debate council, dual sentiment models (FinBERT, RoBERTa) and a local Qwen3-8B via Ollama, with zero external API calls.",
+      "Three-layer anti-hallucination pipeline so the system stays grounded and refuses to answer beyond its evidence."]},
+    "IT Security Vulnerability Agent (RADE)":{stack:"Python · scikit-learn · NVD/CVE · CPE · EPSS · CISA KEV",code:"https://github.com/anishg1010/IT-Security-Agent",bullets:[
+      "Reads software inventories (SBOMs, OCR, typed input), matches components to the National Vulnerability Database via CPE identifiers, and triages what to fix first over CVSS, EPSS and CISA KEV.",
+      "Cross-validated ROC-AUC 0.974, F1 0.894 and Brier 0.049, backed by 131 automated tests (0 failures) at 81.1% coverage over 2,000 NVD records.",
+      "Vendor fairness and bias audits plus model cards; GDPR and EU AI Act aware. Explainable, human-in-the-loop decision support, not automation."]},
+    "Real-Estate Data Pipeline":{stack:"Python · Scrapy · Selenium · BeautifulSoup · Hadoop/HDFS · SQL",code:"",bullets:[
+      "Multi-site scrapers (OpenRent, Rightmove, OnTheMarket) extracting dynamic listings, images and media.",
+      "Landed raw data in HDFS with a Hadoop fault-tolerance test, then cleaned and normalised it into a 5-table relational schema.",
+      "Answered 7 business questions in SQL: end-to-end data engineering from acquisition to a query-ready warehouse."]},
+    "AI Fitness Coach":{stack:"OpenCV · MediaPipe Pose · Flask · FastAPI · React · React Native",code:"",bullets:[
+      "Real-time computer-vision coach (team of 4): MediaPipe Pose and joint-angle geometry count reps and give live form feedback for 5 exercises.",
+      "A Flask backend streams annotated video to a React web app, with an Expo/React Native mobile app served via FastAPI and a rule-based BMI/diet planner.",
+      "Paper ‘AI-Powered Fitness Coaching: Real-Time Workout Detection and Correction’ presented at ICRAES-2K25, Pune (2025). Final-year project graded O."]},
+    "Critical Mineral Supply-Chain Fragility":{stack:"Python · scikit-learn · pandas · GeoPandas",code:"",bullets:[
+      "Global mine-production data (2000-2020): ~500,000 records aggregated to 3,200 country-year-material rows across 140+ countries and 45 minerals.",
+      "Supervised regression to forecast trends plus unsupervised learning (K-Means, DBSCAN, PCA) to map structural fragility.",
+      "Reached an optimal k=3 (Silhouette 0.6810, Davies-Bouldin 0.1789) with Gaussian noise-injection to model reporting uncertainty. Team of 4."]},
+    "HushHush Recruiter":{stack:"Python · scikit-learn · Selenium/Playwright · Streamlit",code:"",bullets:[
+      "GitHub talent-ranking platform combining unsupervised and supervised ML; scraped GitHub, Stack Overflow, LeetCode and Kaggle.",
+      "Compared clustering methods (Silhouette, Davies-Bouldin), selected K-Means, then used cluster labels as targets for a Logistic Regression ranker.",
+      "Role-based coding-assessment workflow with a central review dashboard, deployed with Streamlit."]},
+    "CNN Image Classifier — CIFAR-10":{stack:"Python · TensorFlow / Keras",code:"https://github.com/anishg1010",bullets:[
+      "Four-layer convolutional network (642K parameters) trained on 60,000 images.",
+      "Reached ~80% validation accuracy after 60 epochs.",
+      "Serialised architecture and weights with a working inference pipeline."]}
+  };
+  var modal=document.getElementById('modal'),mTag=document.getElementById('mTag'),mTitle=document.getElementById('mTitle'),
+      mStack=document.getElementById('mStack'),mList=document.getElementById('mList'),mFoot=document.getElementById('mFoot'),lastFocus=null;
+  function openModal(card){
+    var title=card.querySelector('h3').textContent.trim();
+    var d=DETAILS[title];if(!d)return;
+    mTag.textContent=card.querySelector('.tag').textContent;
+    mTitle.textContent=title;mStack.textContent=d.stack;
+    mList.innerHTML='';d.bullets.forEach(function(b){var li=document.createElement('li');li.textContent=b;mList.appendChild(li);});
+    mFoot.innerHTML=d.code?('<a href="'+d.code+'" target="_blank" rel="noopener">View code on GitHub ↗</a>'):'';
+    lastFocus=document.activeElement;modal.classList.add('open');document.body.style.overflow='hidden';
+    modal.querySelector('.x').focus();
+  }
+  function closeModal(){modal.classList.remove('open');document.body.style.overflow='';if(lastFocus)lastFocus.focus();}
+  modal.addEventListener('click',function(e){if(e.target.hasAttribute('data-close'))closeModal();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))closeModal();});
+  cards.forEach(function(c){
+    var hint=document.createElement('div');hint.className='more';hint.innerHTML='View case study <span class="ar">→</span>';
+    c.appendChild(hint);
+    c.setAttribute('role','button');
+    c.addEventListener('click',function(e){if(e.target.closest('a'))return;openModal(c);});
+    c.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&e.target===c){e.preventDefault();openModal(c);}});
+  });
 
   /* copy buttons */
   function copyBtn(id,text){
